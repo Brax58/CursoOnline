@@ -1,12 +1,18 @@
 ﻿using CursoOnline.Test.Util;
 using System;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace CursoOnline.Test.Cursos
 {
     public class CursoTest
     {
-        private Curso curso = new Curso("Informática", 80, PublicoAlvo.Estudante, 950.50);
+        private Curso curso;
+
+        public CursoTest()
+        {
+            curso = new Curso("Informática", 80, PublicoAlvo.Estudante, 950.50);
+        }
 
         [Theory]
         [InlineData("")]
